@@ -1,0 +1,23 @@
+Noelle Dullaghan (ndullagh)
+
+This is my 3rd project for my Systems Programming class. It can Huffman encode and decode given files.
+This is a pretty small pair of programs, so there isn't much to explain here. A Makefile is included to properly compile it.
+
+In terms of the makefile, "all" compiles both hencode and hdecode, while "hencode" and "hdecode" compile only their
+respective programs. These programs can be run like so:
+
+["./hencode" OR "./hdecode"] [file to encode/decode] [output file name]
+
+If no output file name is given, the encoded/decoded data will simply go to stdout. If an output file name is given
+but does not exist, it will be created and filled with the output data.
+
+If Huffman coding is unfamiliar to you, I'll give a very brief explanation. Huffman coding is a type of coding for the
+sake of compression that uses the frequency of each character value in the file to create a code for that character,
+and then simply replace each character with its code. The reason this works for compression is that codes are made from
+0's and 1's, and can be written as binary rather than characters, and codes are often shorter than the 8-bit characters
+they represent. This is done through what is called a Huffman tree. Long story short, a Huffman tree is a full,
+prefixless binary tree where a character's position in the tree represents the path from the root to it's location.
+A 0 means a left; a 1 means a right.
+
+This is a very siplified explanation and doesn't really include any of the "how" of huffman coding, but I hope it
+at least offers a little insight into "what" exactly is going on here if you weren't already aware.
